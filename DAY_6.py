@@ -95,4 +95,30 @@ while True:
         jump()
     if at_goal() == True:
         break
+#################### DAY 6 HURDLE 4 ################################
+def turn_r():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def jump():
+    turn_left()
+    while wall_on_right():
+        move()
+    turn_r()
+    move()
+    turn_r()
+    while front_is_clear():
+        move()
+    turn_left()
+
+
+while True:
+    if wall_in_front():
+        jump()
+    else:
+        move()
+    if at_goal() == True:
+        break
 
